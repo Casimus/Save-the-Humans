@@ -20,13 +20,22 @@ namespace Save_the_Humans
     /// </summary>
     public partial class MainWindow : Window
     {
+        Random random = new Random();
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+       
+        private void startButton_Click(object sender, RoutedEventArgs e)
         {
+            AddEnemy();
+        }
+
+        private void AddEnemy()
+        {
+            ContentControl enemy = new ContentControl();
+            enemy.Template = Resources["EnemyTemplate"] as ControlTemplate;
 
         }
     }
